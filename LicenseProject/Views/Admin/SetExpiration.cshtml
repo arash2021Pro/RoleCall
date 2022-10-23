@@ -1,0 +1,123 @@
+﻿<header xmlns="http://www.w3.org/1999/html">
+   @model LicenseProject.Models.Licences.LicenseCalandarViewModel
+    <title>@ViewData["Title"] تاریخ </title>
+    
+    <link rel="stylesheet" href="~/Forms/css/animate.css">
+    <link rel = "icon" href ="~/Contents/Images/logo.PNG" type = "image/x-icon">
+    <link rel="stylesheet" type="text/css" href="~/Forms/css/bootstrap4-rtl.min.css">
+    <link rel="stylesheet" type="text/css" href="~/Forms/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="~/Forms/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" type="text/css" href="~/Forms/css/style.css" />
+    <link type="text/css" rel="stylesheet" href="~/Calandar/dist/jalalidatepicker.min.css" />
+
+   
+    <link href="css/fonts.fa.css" rel="stylesheet" type="text/css" />
+     <link rel = "icon" href ="~/Contents/Images/logo.PNG" type = "image/x-icon">
+     <!-- Font Awesome -->
+     <link rel="stylesheet" href="~/AdminPannel/plugins/fontawesome-free/css/all.min.css">
+     <!-- iCheck -->
+     <link rel="stylesheet" href="~/AdminPannel/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+   
+     <!-- Theme style -->
+     <link rel="stylesheet" href="~/AdminPannel/dist/css/adminlte.min.css">
+     <!-- overlayScrollbars -->
+     <link rel="stylesheet" href="~/AdminPannel/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+     <!-- Bootstrap 4 RTL -->
+     <link rel="stylesheet" href="https://cdn.rtlcss.com/bootstrap/v4.2.1/css/bootstrap.min.css">
+     <!-- Custom style for RTL -->
+     <link rel="stylesheet" href="~/AdminPannel/dist/css/custom.css">
+
+   
+   
+    
+   <script type="text/javascript" src="~/Calandar/dist/jalalidatepicker.min.js"></script>
+
+    @{
+	    Layout = "SupervisorPannel";
+    }
+</header>
+
+
+<body class="rtl" style="background-color: white" >
+	<div class="limiter"  style="background-color: white">
+		<div class="container-login100" style="background-color: white">
+			<div class="wrap-login100" style="background-color: white">
+
+				<!-- form -->
+				<form class="login100-form validate-form" asp-controller="Admin" asp-action="SetExpiration" method="post">
+					<!-- logo of form -->
+					<span class="login100-form-title p-b-48">
+						<img class="logo" src="~/Contents/Images/logo.PNG" width="200px">
+					</span>
+					<!-- / logo of form -->
+
+					<span class="login100-form-title p-b-26 text-secondary">تاریخ و زمان</span>
+
+					
+					<!-- please enter your email -->
+					
+					<div class="wrap-input100 validate-input" data-validate="تاریخ الزامیست!">
+						<span class="focus-input100"><i class="fa fa-calendar-o"></i></span>
+					</div>
+					<input  asp-for="Time" data-jdp class="form-control" >
+					
+					<!-- login button -->
+					<div class="container-login100-form-btn">
+						<div class="wrap-login100-form-btn">
+							<div class="login100-form-bgbtn"></div>
+							<button type="submit" class="login100-form-btn">ثبت</button>
+						</div>
+					</div>
+					<!-- / login button -->
+					
+				</form>
+				<!-- / form -->
+
+			</div>
+		</div>
+	</div>
+
+
+
+<script src="~/AdminPannel/plugins/jquery/jquery.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="~/AdminPannel/plugins/jquery-ui/jquery-ui.min.js"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+  $.widget.bridge('uibutton', $.ui.button)
+</script>
+<!-- Bootstrap 4 rtl -->
+<script src="https://cdn.rtlcss.com/bootstrap/v4.2.1/js/bootstrap.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="~/AdminPannel/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<script src="~/AdminPannel/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<!-- AdminLTE App -->
+<script src="~/AdminPannel/dist/js/adminlte.js"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="~/AdminPannel/dist/js/pages/dashboard.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="~/AdminPannel/dist/js/demo.js"></script>
+
+
+					
+<!-- Scripts -->
+    	<script src="~/Forms/js/jquery-3.1.1.min.js"></script>
+
+	<script src="~/Forms/js/bootstrap.min.js"></script>
+	<script src="~/Forms/js/scripts.js"></script>
+	<!-- / Scripts -->
+
+
+<script>
+jalaliDatepicker.startWatch();
+</script>
+
+</body><!-- This template has been downloaded from Webrubik.com -->
+
+
+
+
+
+
+

@@ -1,0 +1,155 @@
+﻿@model LicenseProject.Models.Licences.OrderLicenseViewModel
+<html>
+<header>
+ 
+	<title>@ViewData["Title"]ثبت اطلاعات لایسنس</title>
+	<meta charset="UTF-8">
+	<link rel = "icon" href ="~/Contents/Images/logo.PNG" type = "image/x-icon">
+	<!-- styles  -->
+	<link rel="stylesheet" href="~/Forms/css/animate.css">
+	<link rel="stylesheet" type="text/css" href="~/Forms/css/bootstrap4-rtl.min.css">
+	<link rel="stylesheet" type="text/css" href="~/Forms/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="~/Forms/css/material-design-iconic-font.min.css">
+	<link rel="stylesheet" type="text/css" href="~/Forms/css/style.css" />
+	<!--/ styles  -->
+
+</header>
+
+
+<body class="rtl" style="background-color: white" >
+<div class="limiter"  style="background-color: white">
+	<div class="container-login100" style="background-color: white">
+		<div class="wrap-login100" style="background-color: white">
+			<!-- form -->
+			<form class="login100-form validate-form" asp-controller="License" asp-action="CompleteLicense" method="post">
+				<!-- logo of form -->
+				<span class="login100-form-title p-b-48">
+					<img class="logo" src="~/Contents/Images/logo.PNG" width="200px">
+				</span>
+				<!-- / logo of form -->
+
+				<span class="login100-form-title p-b-26 text-secondary">اطلاعات لایسنس</span>
+
+				<!-- please enter your email -->
+				<div class="wrap-input100 validate-input" data-validate="نام الزامیست!">
+					<input class="input100" type="text" asp-for="Name">
+					<span class="focus-input100" data-placeholder="نام"></span>
+					<span asp-validation-for="Name" class="text-danger"></span>
+				</div>
+				<!--  / please enter your email -->
+
+				<!-- please enter your email -->
+				<div class="wrap-input100 validate-input" data-validate="نام خانوادگی الزامیست!">
+					<input class="input100" type="text" asp-for="LastName">
+					<span class="focus-input100" data-placeholder="نام خانوادگی"></span>
+					<span asp-validation-for="LastName" class="text-danger"></span>
+				</div>
+				<!--  / please enter your email -->
+				<!-- please enter your email -->
+				<div class="wrap-input100 validate-input" data-validate="کد ملی یا کد حقوقی شرکن الزامیست!">
+					<input class="input100" type="text" asp-for="LegalCode">
+					<span class="focus-input100" data-placeholder="کد حقوقی"></span>
+					<span asp-validation-for="LegalCode" class="text-danger"></span>
+				</div>
+				<!--  / please enter your email -->
+				<!-- please enter your email -->
+				<div class="wrap-input100 validate-input" data-validate="شماره همراه الزامیست">
+					<input class="input100" type="text" asp-for="PhoneNumber">
+					<span class="focus-input100" data-placeholder="شماره همراه"></span>
+					<span asp-validation-for="PhoneNumber" class="text-danger"></span>
+				</div>
+				<!-- please enter your email -->
+				<div class="wrap-input100 validate-input" data-validate="شماره ثابت الزامیست!">
+					<input class="input100" type="text" asp-for="ConstPhone">
+					<span class="focus-input100" data-placeholder="شماره ثابت"></span>
+					<span asp-validation-for="ConstPhone" class="text-danger"></span>
+				</div>
+				<!--  / please enter your email -->
+				<!-- please enter your email -->
+				<div class="wrap-input100 validate-input" data-validate="نام شرکت الزایسمت!">
+					<input class="input100" type="text" asp-for="CompanyName">
+					<span class="focus-input100" data-placeholder="نام شرکت"></span>
+					<span asp-validation-for="CompanyName" class="text-danger"></span>
+				</div>
+				<!--  / please enter your email -->
+				<!-- please enter your email -->
+				<div class="wrap-input100 validate-input" data-validate="نشانی شرکت الزامیست!">
+					<input class="input100" type="text" asp-for="CompanyAddress">
+					<span class="focus-input100" data-placeholder="نشانی شرکت"></span>
+					<span asp-validation-for="CompanyAddress" class="text-danger"></span>
+				</div>
+				<!--  / please enter your email -->
+
+				<!-- login button -->
+				<div class="container-login100-form-btn">
+					<div class="wrap-login100-form-btn">
+						<div class="login100-form-bgbtn"></div>
+						<button type="submit" class="login100-form-btn">ثبت</button>
+					</div>
+				</div>
+			</form>
+			<!-- / form -->
+
+		</div>
+	</div>
+</div>
+	
+<!-- Scripts -->
+<script src="~/Forms/js/jquery-3.1.1.min.js"></script>
+<script src="~/Forms/js/bootstrap.min.js"></script>
+<script src="~/Forms/js/scripts.js"></script>
+<!-- / Scripts -->
+
+</body><!-- This template has been downloaded from Webrubik.com -->
+</html>
+
+
+<form class="needs-validation" novalidate>
+	<div class="form-row">
+		
+		<div class="col-md-6 mb-3">
+			<label for="validationTooltip01">First name</label>
+			<input type="text" class="form-control" id="validationTooltip01" value="Mark" required>
+			<div class="valid-tooltip">
+				Looks good!
+			</div>
+		</div>
+		
+		<div class="col-md-6 mb-3">
+			<label for="validationTooltip02">Last name</label>
+			<input type="text" class="form-control" id="validationTooltip02" value="Otto" required>
+			<div class="valid-tooltip">
+				Looks good!
+			</div>
+		</div>
+		
+	</div>
+	<div class="form-row">
+		<div class="col-md-6 mb-3">
+			<label for="validationTooltip03">City</label>
+			<input type="text" class="form-control" id="validationTooltip03" required>
+			<div class="invalid-tooltip">
+				Please provide a valid city.
+			</div>
+		</div>
+		<div class="col-md-3 mb-3">
+			<label for="validationTooltip04">State</label>
+			<select class="custom-select" id="validationTooltip04" required>
+				<option selected disabled value="">Choose...</option>
+				<option>...</option>
+			</select>
+			<div class="invalid-tooltip">
+				Please select a valid state.
+			</div>
+		</div>
+		<div class="col-md-3 mb-3">
+			<label for="validationTooltip05">Zip</label>
+			<input type="text" class="form-control" id="validationTooltip05" required>
+			<div class="invalid-tooltip">
+				Please provide a valid zip.
+			</div>
+		</div>
+	</div>
+	<button class="btn btn-primary" type="submit">Submit form</button>
+</form>
+

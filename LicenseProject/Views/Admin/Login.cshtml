@@ -1,0 +1,85 @@
+﻿@model AdminViewModel
+<html>
+<header>
+    <title>@ViewData["Title"]ورود ادمین</title>
+	<link rel="stylesheet" href="~/Forms/css/animate.css">
+	<link rel = "icon" href ="~/Contents/Images/logo.PNG" type = "image/x-icon">
+    	<link rel="stylesheet" type="text/css" href="~/Forms/css/bootstrap4-rtl.min.css">
+    	<link rel="stylesheet" type="text/css" href="~/Forms/css/font-awesome.min.css">
+    	<link rel="stylesheet" type="text/css" href="~/Forms/css/material-design-iconic-font.min.css">
+    	<link rel="stylesheet" type="text/css" href="~/Forms/css/style.css" />
+</header>
+
+
+
+<body class="rtl" style="background-color: white" >
+	<div class="limiter"  style="background-color: white">
+		<div class="container-login100" style="background-color: white">
+			<div class="wrap-login100" style="background-color: white">
+
+				<!-- form -->
+				<form class="login100-form validate-form" asp-controller="Admin" asp-action="Login" method="post">
+					<!-- logo of form -->
+					<span class="login100-form-title p-b-48">
+						<img class="logo" src="~/Contents/Images/logo.PNG" width="200px">
+					</span>
+					<!-- / logo of form -->
+
+					<span class="login100-form-title p-b-26 text-secondary">ورود ادمین</span>
+
+					
+					<!-- please enter your email -->
+					<div class="wrap-input100 validate-input"  data-validate = "الزامیست!">
+						<input class="input100" type="text" asp-for="UserName">
+						<span class="focus-input100" data-placeholder="نام کاربری"></span>
+						<span asp-validation-for="UserName" class="text-danger"></span>
+					</div>
+					
+					
+					<!--  / please enter your username -->
+
+					<!-- please enter your username -->
+					<div class="wrap-input100 validate-input" data-validate="الزامیست!">
+							<span class="btn-show-pass">
+								<i class="zmdi zmdi-eye"></i>
+							</span>
+						<input class="input100" type="password" asp-for="Password">
+						<span class="focus-input100" data-placeholder="رمز عبور"></span>
+						<span asp-validation-for="Password" class="text-danger"></span>
+					</div>
+					<!-- /  please enter your username -->
+
+					<!-- login button -->
+					<div class="container-login100-form-btn">
+						<div class="wrap-login100-form-btn">
+							<div class="login100-form-bgbtn"></div>
+							<button type="submit" class="login100-form-btn"><i class="fa fa-sign-in" aria-hidden="true"></i></button>
+						</div>
+					</div>
+					<!-- / login button -->
+
+					<!-- register-->
+					<div class="text-center p-t-115">
+							<span class="txt1">
+								رمز عبور خود را فراموش کردید ؟
+							</span>
+						<a class="txt2 text-danger">تغییر رمز عبور</a>
+					</div>
+					<!-- / register-->
+
+				</form>
+				<!-- / form -->
+
+			</div>
+		</div>
+	</div>
+	
+	<!-- Scripts -->
+	<script src="~/Forms/js/jquery-3.1.1.min.js"></script>
+	<script src="~/Forms/js/bootstrap.min.js"></script>
+	<script src="~/Forms/js/scripts.js"></script>
+	<!-- / Scripts -->
+
+</body><!-- This template has been downloaded from Webrubik.com -->
+</html>
+

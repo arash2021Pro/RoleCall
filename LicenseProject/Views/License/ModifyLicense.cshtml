@@ -1,0 +1,142 @@
+﻿@using Microsoft.AspNetCore.Mvc.TagHelpers
+@using CoreBussiness.BussinessEntity.Serials
+@model LicenseProject.Models.Licences.ModifyLicenseViewModel
+<html>
+<header>
+    <title>@ViewData["Title"]ویرایش لایسنس</title>
+	<meta charset="UTF-8">
+	
+    <link rel = "icon" href ="~/Contents/Images/logo.PNG" type = "image/x-icon">
+    <link rel="stylesheet" href="~/Forms/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="~/Forms/css/bootstrap4-rtl.min.css">
+    <link rel="stylesheet" type="text/css" href="~/Forms/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="~/Forms/css/material-design-iconic-font.min.css">
+	<link rel="stylesheet" type="text/css" href="~/Forms/css/style.css" />
+	
+	
+	  
+  <link href="css/fonts.fa.css" rel="stylesheet" type="text/css" />
+  <link rel = "icon" href ="~/Contents/Images/logo.PNG" type = "image/x-icon">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="~/AdminPannel/plugins/fontawesome-free/css/all.min.css">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="~/AdminPannel/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+
+  <!-- Theme style -->
+  <link rel="stylesheet" href="~/AdminPannel/dist/css/adminlte.min.css">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="~/AdminPannel/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <!-- Bootstrap 4 RTL -->
+  <link rel="stylesheet" href="https://cdn.rtlcss.com/bootstrap/v4.2.1/css/bootstrap.min.css">
+  <!-- Custom style for RTL -->
+  <link rel="stylesheet" href="~/AdminPannel/dist/css/custom.css">
+
+</header>
+
+@{
+	Layout = "SupervisorPannel";
+}
+
+<body class="rtl" style="background-color: white" >
+	<div class="limiter"  style="background-color: white">
+		<div class="container-login100" style="background-color: white">
+			<div class="wrap-login100" style="background-color: white">
+
+				<!-- form -->
+				<form class="login100-form validate-form" method="post" asp-controller="License" asp-action="ModifyLicense">
+					<!-- logo of form -->
+					<span class="login100-form-title p-b-48">
+						<img class="logo" src="~/Contents/Images/logo.PNG" width="200px">
+					</span>
+					<!-- / logo of form -->
+
+					<span class="login100-form-title p-b-26 text-secondary">ویرایش اطلاعات لایسنس</span>
+					
+					<!-- please enter your email -->
+				
+					<div class="wrap-input100 validate-input" data-validate="!نوع لایسنس الزامیست">
+						
+						<span class="focus-input100" data-placeholder="نوع لایسنس"></span>
+						<span asp-validation-for="SoftwareType" class="text-danger"></span>
+					</div>
+					<select    asp-for="SoftwareType" asp-items="@Html.GetEnumSelectList(typeof(SoftwareType))" class=" input100">
+						<option selected="selected" value="">انتخاب نوع نرم افزار </option>
+					</select>
+					
+					
+					
+					
+					<!--  / please enter your email -->
+
+					<!-- please enter your username -->
+						
+					<div class="wrap-input100 validate-input" data-validate="الزامیست!">
+						<span class="focus-input100" data-placeholder="نسخه موبایل"></span>
+					</div>
+					<input type="checkbox"  asp-for="IsMobileVersionActive">
+					
+					<div class="wrap-input100 validate-input" data-validate="الزامیست!">
+						<span class="focus-input100" data-placeholder="پنل پیامکی"></span>
+					</div>
+					<input type="checkbox"  asp-for="IsSmsPanelActive">
+					
+					
+					<div class="wrap-input100 validate-input" data-validate="الزامیست!">
+						<span class="focus-input100" data-placeholder="تعداد کلاینت"></span>
+					</div>
+					<input type="number" class="form-control" asp-for="ClientCount">
+					<br/>
+					<div class="wrap-input100 validate-input" data-validate="الزامیست!">
+						<span class="focus-input100" data-placeholder="تعداد سریال لایسنس"></span>
+					</div>
+					<input type="number" class="form-control" asp-for="AppSerialCount">
+					
+					<!-- /  please enter your username -->
+
+					<!-- login button -->
+					<div class="container-login100-form-btn">
+						<div class="wrap-login100-form-btn">
+							<div class="login100-form-bgbtn"></div>
+							<button type="submit" class="login100-form-btn">ثبت</button>
+						</div>
+					</div>
+				</form>
+				<!-- / form -->
+
+			</div>
+		</div>
+	</div>
+
+
+<script src="~/AdminPannel/plugins/jquery/jquery.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="~/AdminPannel/plugins/jquery-ui/jquery-ui.min.js"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+  $.widget.bridge('uibutton', $.ui.button)
+</script>
+<!-- Bootstrap 4 rtl -->
+<script src="https://cdn.rtlcss.com/bootstrap/v4.2.1/js/bootstrap.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="~/AdminPannel/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<script src="~/AdminPannel/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<!-- AdminLTE App -->
+<script src="~/AdminPannel/dist/js/adminlte.js"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="~/AdminPannel/dist/js/pages/dashboard.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="~/AdminPannel/dist/js/demo.js"></script>
+
+
+
+<!-- Scripts -->
+	<script src="~/Forms/js/jquery-3.1.1.min.js"></script>
+	<script src="~/Forms/js/bootstrap.min.js"></script>
+	<script src="~/Forms/js/scripts.js"></script>
+	<!-- / Scripts -->
+
+</body><!-- This template has been downloaded from Webrubik.com -->
+
+</html>
+

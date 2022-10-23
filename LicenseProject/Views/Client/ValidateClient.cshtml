@@ -1,0 +1,79 @@
+﻿@model LicenseProject.Models.Client.ValidateClientViewModel
+<html>
+<header>
+ 
+	<title>@ViewData["Title"]اعتبار سنجی کلاینت</title>
+	<!-- styles  -->
+	<link href="css/fonts.fa.css" rel="stylesheet" type="text/css" />
+	<link rel = "icon" href ="~/Contents/Images/logo.PNG" type = "image/x-icon">
+	<link rel="stylesheet" href="~/Forms/css/animate.css">
+	<link rel="stylesheet" type="text/css" href="~/Forms/css/bootstrap4-rtl.min.css">
+	<link rel="stylesheet" type="text/css" href="~/Forms/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="~/Forms/css/material-design-iconic-font.min.css">
+	<link rel="stylesheet" type="text/css" href="~/Forms/css/style.css" />
+	<style>
+       body{
+        font-family: IRANSans !important;
+        background-color: white;
+        }
+      </style>
+	<!--/ styles  -->
+</header>
+  
+
+<body class="rtl" style="background-color: white" >
+	<div class="limiter"  style="background-color: white">
+		<div class="container-login100" style="background-color: white">
+			<div class="wrap-login100" style="background-color: white">
+
+				<!-- form -->
+				<form class="login100-form validate-form" asp-controller="Client" asp-action="ValidateClient" method="post">
+					<!-- logo of form -->
+					<span class="login100-form-title p-b-48">
+						<img class="logo" src="~/Contents/Images/logo.PNG" width="200px">
+					</span>
+					<!-- / logo of form -->
+
+					<span class="login100-form-title p-b-26 text-secondary">اعتبار سنجی کلاینت های لایسنس</span>
+
+					<!-- please enter your email -->
+					<div class="wrap-input100 validate-input"  data-validate = "سریال لایسنس الزامیست!">
+						<input class="input100" type="text" asp-for="AppSerial">
+						<span class="focus-input100" data-placeholder="سریال لایسنس"></span>
+						<span asp-validation-for="AppSerial" class="text-danger"></span>
+					</div>
+					<!--  / please enter your email -->
+
+					<!-- please enter your username -->
+					<div class="wrap-input100 validate-input"  data-validate = "سریال سیستم الزامیست!">
+						<input class="input100" type="text" asp-for="SystemSerial">
+						<span class="focus-input100" data-placeholder="سریال سیستم"></span>
+						<span asp-validation-for="SystemSerial" class="text-danger"></span>
+				    </div>
+					
+					<!-- /  please enter your username -->
+
+					<!-- login button -->
+					<div class="container-login100-form-btn">
+						<div class="wrap-login100-form-btn">
+							<div class="login100-form-bgbtn"></div>
+							<button type="submit" class="login100-form-btn">اعتبار سنجی</button>
+						</div>
+					</div>
+					
+				</form>
+				<!-- / form -->
+
+			</div>
+		</div>
+	</div>
+	
+	<!-- Scripts -->
+	<script src="~/Forms/js/jquery-3.1.1.min.js"></script>
+	<script src="~/Forms/js/bootstrap.min.js"></script>
+	<script src="~/Forms/js/scripts.js"></script>
+	<!-- / Scripts -->
+
+</body><!-- This template has been downloaded from Webrubik.com -->
+</html>
+

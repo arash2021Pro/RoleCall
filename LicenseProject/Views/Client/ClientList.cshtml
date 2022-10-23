@@ -1,0 +1,45 @@
+﻿@using DocumentFormat.OpenXml.Office2010.Excel
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+@using CoreBussiness.BussinessEntity.Serials
+
+
+@{
+    Layout = "SupervisorPannel";
+}
+@section JsScripts
+{
+    <!--suppress ALL -->
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.11.5/datatables.min.js"></script>
+    <script src="~/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+
+    <script>
+      var dataTable;       
+      $(document).ready(function() {
+          dataTable =  $('#dataTable').DataTable( {
+              "processing": true,
+              "serverSide": true,
+              "ajax": "@Url.Action("LoadClients", "Client",new {id=ViewContext.RouteData.Values["id"]!.ToString()})",
+               "columns":[
+                   {"data":"id"},
+                   {"data":"creationTime"},
+                   {"data":"appSerial",render:function(data) {
+                       var lincese = ""
+                       lincese = '<span class="badge alert-warning rounded-pill">'+data+'</span>'
+                       return `${lincese}`
+                   }},
+                   {"data":"systemSerial",render:function(data) {
+                       var lincese = ""
+                       lincese = '<span class="badge alert-warning rounded-pill">'+data+'</span>'
+                       return `${lincese}`
+                   }},
+              ]
+          });
+      });
+      
+      </script>
+}
+
+@await Html.PartialAsync("ClientDataTable")
+
+
+

@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>داشبورد</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link href="css/fonts.fa.css" rel="stylesheet" type="text/css" />
+  <link rel = "icon" href ="~/Contents/Images/logo.PNG" type = "image/x-icon">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="~/AdminPannel/plugins/fontawesome-free/css/all.min.css">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="~/AdminPannel/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+
+  <!-- Theme style -->
+  <link rel="stylesheet" href="~/AdminPannel/dist/css/adminlte.min.css">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="~/AdminPannel/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <!-- Bootstrap 4 RTL -->
+  <link rel="stylesheet" href="https://cdn.rtlcss.com/bootstrap/v4.2.1/css/bootstrap.min.css">
+  <!-- Custom style for RTL -->
+  <link rel="stylesheet" href="~/AdminPannel/dist/css/custom.css">
+  
+  <style>
+    body{
+    font-family: IRANSans !important;
+    background-color: white;
+    }
+  </style>
+</head>
+<body class="hold-transition sidebar-mini layout-fixed" style="background-color: white">
+<div class="wrapper">
+
+  <!-- Navbar -->
+  @await Html.PartialAsync("_NavBar")
+  <!-- /.navbar -->
+
+
+  @await Html.PartialAsync("_SideBar")
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+
+
+    <!-- Main content -->
+    <section class="content" style="background-color: white">
+      <div class="container-fluid" style="background-color: white">
+        @RenderBody()
+      </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+
+  </footer>
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery -->
+<script src="~/AdminPannel/plugins/jquery/jquery.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="~/AdminPannel/plugins/jquery-ui/jquery-ui.min.js"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+  $.widget.bridge('uibutton', $.ui.button)
+</script>
+<!-- Bootstrap 4 rtl -->
+<script src="https://cdn.rtlcss.com/bootstrap/v4.2.1/js/bootstrap.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="~/AdminPannel/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<script src="~/AdminPannel/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<!-- AdminLTE App -->
+<script src="~/AdminPannel/dist/js/adminlte.js"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="~/AdminPannel/dist/js/pages/dashboard.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="~/AdminPannel/dist/js/demo.js"></script>
+</body>
+
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+@await RenderSectionAsync("JsScripts", required: false)
